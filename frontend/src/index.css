@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper text-ink font-sans text-body;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-ink;
+  }
+  a {
+    @apply transition-colors;
+  }
+  ::selection {
+    @apply bg-accent/30 text-ink;
+  }
+}

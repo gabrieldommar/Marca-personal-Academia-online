@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -m py_compile $f)",
+      "PowerShell($f = \"backend\\\\app\\\\oauth.py\",\"backend\\\\app\\\\middleware\\\\auth.py\",\"backend\\\\app\\\\services\\\\auth_service.py\",\"backend\\\\app\\\\routes\\\\auth.py\",\"backend\\\\app\\\\main.py\")",
+      "PowerShell(if \\($?\\) { \"OK - sin errores de sintaxis\" })",
+      "PowerShell($f = \"backend\\\\app\\\\services\\\\storage.py\",\"backend\\\\app\\\\services\\\\course_service.py\",\"backend\\\\app\\\\services\\\\collaboration_service.py\",\"backend\\\\app\\\\routes\\\\courses.py\",\"backend\\\\app\\\\routes\\\\brand.py\",\"backend\\\\app\\\\main.py\")",
+      "PowerShell(python -m py_compile backend\\\\app\\\\services\\\\storage.py backend\\\\app\\\\routes\\\\courses.py)",
+      "PowerShell(if \\($?\\) { \"OK\" })",
+      "PowerShell(cd backend; $env:JWT_SECRET=\"dev-temporal-export\"; .\\\\.venv\\\\Scripts\\\\python.exe -m scripts.export_openapi)",
+      "WebFetch(domain:moure.dev)",
+      "Bash(npm test *)"
+    ]
+  }
+}

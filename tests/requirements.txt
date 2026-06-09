@@ -1,0 +1,2 @@
+# Tests de backend. httpx ya viene en backend/requirements.txt (lo usa TestClient).
+pytest==8.3.4

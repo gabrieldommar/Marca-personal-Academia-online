@@ -1,0 +1,42 @@
+# ── Sistema de agentes (no es parte del proyecto) ──────────────────
+AGENT.md
+SETUP.md
+COHERENCE_REPORT.md
+agents/
+skills/
+memory/
+
+# ── Entornos y secretos ─────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# ── Python ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+.pytest_cache/
+
+# ── Node ────────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── Base de datos local ─────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Archivos subidos (generados en runtime) ─────────────────────────
+storage/
+
+# ── OS / editor ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
